@@ -1,0 +1,1 @@
+export { ArticleContainer as default, Props } from "./ArticleContainer";

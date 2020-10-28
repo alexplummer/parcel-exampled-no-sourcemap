@@ -1,0 +1,1 @@
+export { Article as default, Props } from "./Article";

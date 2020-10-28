@@ -1,0 +1,288 @@
+// Default setup
+// ============
+// The default set of variables
+
+$clr-primary: #E61739;
+$clr-secondary: #991F3D;
+$clr-tertiary: #FF6A00;
+$clr-hlight: #F2A200;
+$clr-shade: #407080;
+
+$clr-link: #40BBC9;
+$clr-link-hover: saturate(darken($clr-link, 25%), 50%);
+$clr-pending: #F2A200;
+$clr-validated: #40C980;
+$clr-warning: #E61739;
+$clr-disabled: #AAAFB3;
+
+$clr-light: #E4E8EB;
+$clr-lighter: #EFEFEF;
+$clr-dark: #545759;
+$clr-darker: #2E3133;
+
+$clr-primary-textoverlay: #FFFFFF;
+$clr-secondary-textoverlay: #FFFFFF;
+$clr-tertiary-textoverlay: #FFFFFF;
+$clr-hlight-textoverlay: $clr-darker;
+$clr-shade-textoverlay: #FFFFFF;
+$clr-link-textoverlay: #FFFFFF;
+$clr-warning-textoverlay: #FFFFFF;
+$clr-disabled-textoverlay: #EEEEEE;
+
+$clr-primary-dark: darken($clr-primary, 15%);
+$clr-secondary-dark: darken($clr-secondary, 5%);
+$clr-tertiary-dark: darken($clr-tertiary, 5%);
+$clr-hlight-dark: darken($clr-hlight, 5%);
+$clr-shade-dark: darken($clr-shade, 5%);
+
+$clr-primary-light: lighten($clr-primary, 10%);
+$clr-secondary-light: lighten($clr-secondary, 10%);
+$clr-tertiary-light: lighten($clr-tertiary, 10%);
+$clr-hlight-light: lighten($clr-hlight, 10%);
+$clr-shade-light: lighten($clr-shade, 5%);
+
+// Font families
+// ============
+// Font family definitions
+
+$font-header: "Roboto Condensed", sans-serif;
+$font-body: "Nunito Sans", sans-serif;
+$font-quote: "Nunito Sans", sans-serif;
+
+// Modify irregular xheight fonts
+$xheight-header: 1;
+$xheight-body: 1;
+
+// Scales
+// ============
+// Scales used for type and spacing
+
+// Convert pixels to rems
+@function px2rem($size) {
+	@return $size / 16 * 1rem;
+}
+
+// Font sizes
+$font-xxxl: px2rem(60);
+$font-xxl: px2rem(48);
+$font-xl: px2rem(36);
+$font-l: px2rem(24);
+$font-m: px2rem(18);
+$font-s: px2rem(16);
+$font-xs: px2rem(14);
+$font-xxs: px2rem(12);
+$font-xxxs: px2rem(6);
+
+// Baseline
+$font-size-body: px2rem(16);
+$font-baseline: px2rem(24);
+
+// Distances
+$size-xl:  /* 120px */ $font-baseline * 5;
+$size-l:   /* 48px */ $font-baseline * 2;
+$size-m:   /* 24px */ $font-baseline;
+$size-s:   /* 12px */ $font-baseline / 2;
+$size-xs:  /*  6px */ $font-baseline / 4;
+$size-xxs: /*  3px */ $font-baseline / 8;
+
+// Heading sizes
+// ============
+// Sizes for headings based on the font scale
+
+// Desktop
+$font-h1-desktop: $font-l;
+$font-h2-desktop: $font-l;
+$font-h3-desktop: $font-l;
+$font-h4-desktop: $font-xs + $font-xxxs;
+$font-h5-desktop: $font-s;
+
+// Laptop
+$font-h1-laptop: $font-l;
+$font-h2-laptop: $font-l;
+$font-h3-laptop: $font-l;
+$font-h4-laptop: $font-m;
+$font-h5-laptop: $font-s;
+
+// Tablet
+$font-h1-tablet: $font-l;
+$font-h2-tablet: $font-m;
+$font-h3-tablet: $font-m;
+$font-h4-tablet: $font-s;
+$font-h5-tablet: $font-s;
+
+// Mobile
+$font-h1-mobile: $font-l;
+$font-h2-mobile: $font-m;
+$font-h3-mobile: $font-m;
+$font-h4-mobile: $font-s;
+$font-h5-mobile: $font-s;
+
+// Body sizes
+// ============
+// Sizes for non-header elements
+
+// Desktop
+$font-body-desktop: $font-size-body;
+
+// Laptop
+$font-body-laptop: $font-xs;
+
+// Tablet
+$font-body-tablet: $font-s;
+
+// Mobile
+$font-body-mobile: $font-xs;
+
+// Grid
+// ============
+// Used to setup the flexbox grid
+
+// Breakpoints
+$mobile: 320px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1500px;
+$max: 1800px;
+
+// Breakpoints max (useful in media queries)
+$mobile-max: $tablet - 1px;
+$tablet-max: $laptop - 1px;
+$laptop-max: $desktop - 1px;
+
+// Containers
+$container-mobile: calc(100% - #{$size-xs * 2});
+$container-tablet: calc(100% - #{$size-s * 2});
+$container-laptop: 1000px;
+$container-desktop: 1000px;
+$container-max: 1000px;
+
+// Columns & margins
+$grid-columns: 12;
+$gutter-width: $size-l;
+$outer-margin: $size-s;
+
+// Breakpoint mappings (name, size, container width)
+$breakpoints: (
+	xs $mobile $container-mobile,
+	sm $tablet $container-tablet,
+	md $laptop $container-laptop,
+	lg $desktop $container-desktop,
+	xl $max $container-max
+);
+
+// Z-index
+// ============
+// Structured Z-index
+
+$z-max: 1000;
+$z-l: 100;
+$z-m: 50;
+$z-s: 10;
+$z-min: 0;
+
+// Animate.css
+// ============
+// Turn specifice animate.css animations on or off
+
+// Fade Enter
+$use-fadeIn: false;
+$use-fadeInUp: false;
+$use-fadeInUpBig: false;
+$use-fadeInDown: false;
+$use-fadeInDownBig: false;
+$use-fadeInLeft: false;
+$use-fadeInLeftBig: false;
+$use-fadeInRight: false;
+$use-fadeInRightBig: false;
+
+// Fade Exit
+$use-fadeOut: false;
+$use-fadeOutUp: false;
+$use-fadeOutUpBig: false;
+$use-fadeOutDown: false;
+$use-fadeOutDownBig: false;
+$use-fadeOutLeft: false;
+$use-fadeOutLeftBig: false;
+$use-fadeOutRight: false;
+$use-fadeOutRightBig: false;
+
+// Bounce Enter
+$use-bounceIn: false;
+$use-bounceInUp: false;
+$use-bounceInDown: false;
+$use-bounceInLeft: false;
+$use-bounceInRight: false;
+
+// Bounce Exit
+$use-bounceOut: false;
+$use-bounceOutUp: false;
+$use-bounceOutDown: false;
+$use-bounceOutLeft: false;
+$use-bounceOutRight: false;
+
+// Rotate Enter
+$use-rotateIn: false;
+$use-rotateInUpLeft: false;
+$use-rotateInUpRight: false;
+$use-rotateInDownLeft: false;
+$use-rotateInDownRight: false;
+
+// Rotate Exit
+$use-rotateOut: false;
+$use-rotateOutUpLeft: false;
+$use-rotateOutUpRight: false;
+$use-rotateOutDownLeft: false;
+$use-rotateOutDownRight: false;
+
+// Slide Enter
+$use-slideIn: false;
+$use-slideInUp: false;
+$use-slideInDown: false;
+$use-slideInLeft: false;
+$use-slideInRight: false;
+
+// Slide Exit
+$use-slideOut: false;
+$use-slideOutUp: false;
+$use-slideOutDown: false;
+$use-slideOutLeft: false;
+$use-slideOutRight: false;
+
+// Flippers
+$use-flipInX: false;
+$use-flipInY: false;
+$use-flipOutX: false;
+$use-flipOutY: false;
+
+// Lightspeed
+$use-lightSpeedIn: false;
+$use-lightSpeedOut: false;
+
+// Attention Seekers
+$use-bounce: false;
+$use-flash: false;
+$use-pulse: false;
+$use-wiggle: false;
+$use-swing: false;
+$use-shake: false;
+$use-tada: false;
+$use-wobble: false;
+
+// Special
+$use-hinge: false;
+$use-rollIn: false;
+$use-rollOut: false;
+
+// Zoom In
+$use-zoomIn: false;
+$use-zoomInDown: false;
+$use-zoomInLeft: false;
+$use-zoomInRight: false;
+$use-zoomInUp: false;
+
+// Zoom Out
+$use-zoomOut: false;
+$use-zoomOutDown: false;
+$use-zoomOutLeft: false;
+$use-zoomOutRight: false;
+$use-zoomOutUp: false;
